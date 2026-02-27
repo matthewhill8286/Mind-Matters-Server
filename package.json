@@ -5,13 +5,13 @@
   "main": "src/server.ts",
   "scripts": {
     "dev": "npx tsx src/server.ts",
-    "build": "npx prisma generate && npx tsc",
+    "build": "npx prisma generate && npx tsc && npm run start",
     "deploy": "npx prisma migrate deploy",
     "generate": "npx prisma generate",
     "format": "npx prettier --write .",
     "lint": "npx eslint --fix .",
     "test": "npx jest",
-    "start": "npm run dev"
+    "start": "npx tsx dist/server.js"
   },
   "engines": {
     "node": ">=24.0.0"
