@@ -2,7 +2,7 @@
   "name": "mindmate-server",
   "type": "module",
   "private": true,
-  "main": "dist/server.js",
+  "main": "src/server.ts",
   "scripts": {
     "dev": "npx tsx src/server.ts",
     "build": "npx prisma generate && npx tsc",
