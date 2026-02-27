@@ -1,0 +1,26 @@
+node_modules
+.env.*
+.env
+.vercel
+
+dist/**/*
+
+# Project exclude paths
+/src/generated/prisma/internal/class.js
+/src/generated/prisma/internal/prismaNamespace.js
+/src/generated/prisma/internal/prismaNamespaceBrowser.js
+/src/generated/prisma/models/Assessment.js
+/src/generated/prisma/models/ChatHistory.js
+/src/generated/prisma/models/Journal.js
+/src/generated/prisma/models/Mindfulness.js
+/src/generated/prisma/models/Mood.js
+/src/generated/prisma/models/Profile.js
+/src/generated/prisma/models/Sleep.js
+/src/generated/prisma/models/StressHistory.js
+/src/generated/prisma/models/StressKit.js
+/src/generated/prisma/models/User.js
+/src/generated/prisma/browser.js
+/src/generated/prisma/client.js
+/src/generated/prisma/commonInputTypes.js
+/src/generated/prisma/enums.js
+/src/generated/prisma/models.js
