@@ -11,7 +11,7 @@
     "format": "npx prettier --write .",
     "lint": "npx eslint --fix .",
     "test": "npx jest",
-    "start": "node dist/server.js"
+    "start": "npm run dev"
   },
   "engines": {
     "node": ">=24.0.0"
