@@ -1,5 +1,11 @@
 {
   "version": 2,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/server"
+    }
+  ],
   "env": {
     "PRISMA_GENERATE_DATAPROXY": "true",
     "NODE_ENV": "production"
