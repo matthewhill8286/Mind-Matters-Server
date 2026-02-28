@@ -1,8 +1,8 @@
 {
   "version": 2,
   "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs@24.x"
+    "api/**/*.ts": {
+      "runtime": "nodejs20.x"
     }
   },
   "env": {
