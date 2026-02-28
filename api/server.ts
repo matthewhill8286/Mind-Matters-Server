@@ -1,5 +1,5 @@
-import app from "../src/app";
-import { config } from "../src/config";
+import app from "./app";
+import { config } from "./config";
 
 if (config.NODE_ENV !== "production") {
   const PORT = config.PORT;

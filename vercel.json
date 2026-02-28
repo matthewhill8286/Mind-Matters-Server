@@ -1,14 +1,8 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/server"
-    }
-  ],
   "functions": {
-    "dist/api/server.js": {
-      "runtime": "@vercel/node@24.x"
+    "api/**/*.js": {
+      "runtime": "nodejs20.x"
     }
   },
   "env": {
