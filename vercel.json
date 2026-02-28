@@ -1,17 +1,16 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "dist/src/server.js",
-      "use": "@vercel/node"
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/api/server"
     }
   ],
+  "functions": {
+    "dist/api/server.js": {
+      "runtime": "@vercel/node"
+    }
+  },
   "env": {
     "PRISMA_GENERATE_DATAPROXY": "true",
     "NODE_ENV": "production"
