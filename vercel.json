@@ -7,9 +7,7 @@
     }
   ],
   "functions": {
-    "api/server.ts": {
-        "runtime": "nodejs24.x"
-    }
+    "api/server.ts": {}
   },
   "env": {
     "PRISMA_GENERATE_DATAPROXY": "true",
