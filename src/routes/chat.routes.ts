@@ -1,0 +1,15 @@
+import { Router } from "express";
+import multer from "multer";
+import { ChatController } from "../controllers/chat.controller";
+
+const router = Router();
+const upload = multer({ storage: multer.memoryStorage() });
+
+router.get("/chat/history/:issueKey", ChatController.getChatHistory);
+router.post("/chat/history/:issueKey", ChatController.updateChatHistory);
+router.delete("/chat/history/:issueKey", ChatController.deleteChatHistory);
+
+router.post("/transcribe", upload.single("file"), ChatController.transcribe);
+router.post("/chat", ChatController.chat);
+
+export default router;
