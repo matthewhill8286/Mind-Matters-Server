@@ -24,3 +24,4 @@ dist/**/*
 /api/generated/prisma/commonInputTypes.js
 /api/generated/prisma/enums.js
 /api/generated/prisma/models.js
+.env*.local
