@@ -2,8 +2,7 @@
   "version": 2,
   "routes": [
     {
-      "src": "/(.*)",
-      "destination": "/src/app"
+      "src": "/(.*)"
     }
   ],
   "env": {
