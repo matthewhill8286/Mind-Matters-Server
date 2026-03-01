@@ -3,16 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "scripts": {
-    "deploy": "npx prisma migrate deploy",
-    "migrate": "npx prisma migrate reset",
-    "generate": "npx prisma generate",
-    "format": "npx prettier --write .",
-    "lint": "npx eslint --fix .",
-    "test": "npx jest",
-    "build": "tsc -p tsconfig.json",
-    "postinstall": "prisma generate"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
