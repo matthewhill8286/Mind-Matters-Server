@@ -1,31 +1,22 @@
-# Express.js on Vercel
+# Render deployment example
 
-Basic Express.js + Vercel example that serves html content, JSON data and simulates an api route.
+This example demonstrates how to deploy an Express app with Prisma ORM on [Render](https://render.com).
 
-## How to Use
+See the [Render deployment guide](https://www.prisma.io/docs/guides/deployment/deploying-to-render) for full details.
 
-You can choose from one of the following two methods to use this repository:
-
-### One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/examples/tree/main/solutions/express&project-name=express&repository-name=express)
-
-### Clone and Deploy
-
+## Download this code
 ```bash
-git clone https://github.com/vercel/examples/tree/main/solutions/express
+curl https://codeload.github.com/prisma/prisma-examples/tar.gz/latest | tar -xz --strip=2 prisma-examples-latest/deployment-platforms/render
+cd render
 ```
 
-Install the Vercel CLI:
+## About Render
+Render enables developers to easily host and scale full-stack web applications. Render natively supports [common runtimes](https://docs.render.com/language-support), including Node.js and Bun. Render also supports deploying from a Dockerfile or Docker registry.
 
-```bash
-npm i -g vercel
-```
+## Resources
 
-Then run the app at the root of the repository:
-
-```bash
-vercel dev
-```
+- Check out the [Prisma docs](https://www.prisma.io/docs)
+- [Join our community on Discord](https://pris.ly/discord?utm_source=github&utm_medium=prisma_examples&utm_content=next_steps_section) to share feedback and interact with other users.
+- [Subscribe to our YouTube channel](https://pris.ly/youtube?utm_source=github&utm_medium=prisma_examples&utm_content=next_steps_section) for live demos and video tutorials.
+- [Follow us on X](https://pris.ly/x?utm_source=github&utm_medium=prisma_examples&utm_content=next_steps_section) for the latest updates.
+- Report issues or ask [questions on GitHub](https://pris.ly/github?utm_source=github&utm_medium=prisma_examples&utm_content=next_steps_section).
