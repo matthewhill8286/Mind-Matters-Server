@@ -5,12 +5,12 @@
     "target": "ES2023",
     "strict": true,
     "esModuleInterop": true,
-    "rootDir": ".",
-    "outDir": "dist"
+    "skipLibCheck": true
   },
-  "include": [".",
+  "include": [
+    ".",
+    "api/**/*",
     "src/**/*",
-    "src/**/*"
   ],
   "exclude": ["node_modules"]
 }
