@@ -3,14 +3,11 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "target": "ES2023",
-    "strict": true,
+    "outDir": "./dist",
+    "rootDir": ".",
     "esModuleInterop": true,
-    "skipLibCheck": true
-  },
-  "include": [
-    ".",
-    "api/**/*",
-    "src/**/*",
-  ],
-  "exclude": ["node_modules"]
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }

@@ -1,25 +1,31 @@
-# Mind-Matters
+# Express.js on Vercel
 
-### Deployment
+Basic Express.js + Vercel example that serves html content, JSON data and simulates an api route.
 
-The best way to host this API is using a container-based platform. 
+## How to Use
 
-#### Recommended Hosting Services:
-- **Render / Railway**: Very easy to set up. Connect your GitHub repository, and they will automatically detect the Dockerfile or use Node.js to deploy.
-- **AWS App Runner / Google Cloud Run**: Great for scaling and reliable production environments.
-- **DigitalOcean App Platform**: A simple way to deploy containerized apps.
+You can choose from one of the following two methods to use this repository:
 
-#### Steps to Deploy:
-1. **Containerize**: A `Dockerfile` and `.dockerignore` have been provided.
-2. **Environment Variables**: Ensure you set the following in your hosting provider's dashboard:
-   - `STRIPE_SECRET_KEY`
-   - `OPENAI_API_KEY`
-   - `PORT` (usually defaults to 8787 or is provided by the host)
-3. **Domain & SSL**: Most modern hosts (Render, Railway, etc.) provide automatic SSL and a subdomain for your API.
+### One-Click Deploy
 
-#### Local Docker Build:
-To test the container locally:
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/examples/tree/main/solutions/express&project-name=express&repository-name=express)
+
+### Clone and Deploy
+
 ```bash
-docker build -t mindmate-server .
-docker run -p 8787:8787 --env-file .env mindmate-server
+git clone https://github.com/vercel/examples/tree/main/solutions/express
+```
+
+Install the Vercel CLI:
+
+```bash
+npm i -g vercel
+```
+
+Then run the app at the root of the repository:
+
+```bash
+vercel dev
 ```
