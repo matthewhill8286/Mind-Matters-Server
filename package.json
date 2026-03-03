@@ -1,25 +1,46 @@
 {
-  "name": "prisma-on-render",
-  "version": "1.0.0",
+  "name": "mindmate-server",
   "type": "module",
-  "description": "Example Express API that uses Prisma ORM, deployed on Render",
-  "main": "index.js",
+  "private": true,
+  "main": "src/server.ts",
   "scripts": {
-    "build": "prisma generate",
-    "dev": "PORT=3000 node src/index.js",
-    "start": "node src/index.js"
+    "start": "npx tsx src/server.ts",
+    "build": "npx prisma generate && npx tsc",
+    "deploy": "npx prisma migrate deploy",
+    "generate": "npx prisma generate",
+    "format": "npx prettier --write .",
+    "lint": "npx eslint --fix .",
+    "test": "npx jest"
   },
-  "author": "@jess-render",
-  "license": "ISC",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "dependencies": {
-    "@prisma/client": "6.9.0",
-    "body-parser": "2.2.1",
-    "express": "5.1.0"
+    "@prisma/adapter-pg": "^7.4.1",
+    "@prisma/client": "^7.4.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.0.2",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.18.0",
+    "stripe": "^20.1.2",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
-    "prisma": "6.9.0"
-  },
-  "prisma": {
-    "seed": "node prisma/seed.js"
+    "@types/bcryptjs": "^3.0.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^25.3.0",
+    "@types/pg": "^8.16.0",
+    "dotenv": "^17.3.1",
+    "prisma": "^7.4.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }
