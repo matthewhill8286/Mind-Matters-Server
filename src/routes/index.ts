@@ -3,6 +3,7 @@ import authRoutes from "./auth.routes";
 import profileRoutes from "./profile.routes";
 import activityRoutes from "./activity.routes";
 import chatRoutes from "./chat.routes";
+import stripeRoutes from "./stripe.routes";
 import { authMiddleware } from "../middlewares/auth.middleware";
 
 const router = Router();
@@ -15,5 +16,6 @@ router.use(authMiddleware);
 router.use(profileRoutes);
 router.use(activityRoutes);
 router.use(chatRoutes);
+router.use(stripeRoutes);
 
 export default router;
