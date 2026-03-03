@@ -1,6 +1,14 @@
 # Runtime environment
 FROM node:24-slim
 
+# Build-time arguments
+ARG DATABASE_URL
+ARG PORT=3000
+
+# Set environment variables for runtime
+ENV DATABASE_URL=${DATABASE_URL}
+ENV PORT=${PORT}
+
 # Install openssl for Prisma
 RUN apt-get update -y && apt-get install -y openssl && rm -rf /var/lib/apt/lists/*
 
@@ -19,8 +27,8 @@ COPY . .
 # Ensure .env exists if not provided
 RUN test -f .env || cp .env.local .env
 
-# Generate Prisma client using the build-time DATABASE_URL (or default)
-RUN DATABASE_URL=${DATABASE_URL} npx prisma generate
+# Generate Prisma client using the build-time DATABASE_URL
+RUN npx prisma generate
 
 # Expose the application port
 EXPOSE ${PORT}
